@@ -16,16 +16,19 @@ Tested and working on the following:
 
 * OS:
 	* Windows 10 Pro build 2004
-	* Windows Server Core 2019
-	
+	* Windows Server 2019 Core
+	* Windows Server 2019 AMI
+
 * Platforms:
-	* Azure NV6_Promo
+	* Azure NV6_Promo (Tesla M60)
+	* Amazon AWS g4dn.large (Tesla T4)
+
 
 **WARNING: Machines provided by Shadow.tech supposedly have incompatibility with GeForce Experience and may brick your VM. Use at your own risk.**
 
 ## FAQ
 ### Will this work on \<insert platform and instance name here\>?
-  I have only tested this on Azure's NV6_Promo instance. I would like to build a list of platforms it currently supports, so if you've tested it yourself and it works, please message me on reddit `/u/acceleration3` with the information on your VM. If it doesn't work you can also message me with details and I will try and change the script to support your VM.
+I am building a list of platforms it currently supports, so if you've tested it yourself and it works, please message me on reddit `/u/acceleration3` with the information on your VM. If it doesn't work you can also message me with details and I will try and change the script to support your VM.
 
 ### The script didn't enable my GameStream at all.
   Remember to **not use this script on a Microsoft Remote Desktop session**. I recommend using AnyDesk as an alternative. If it still doesn't work then the script doesn't currently support your machine. 
