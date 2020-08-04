@@ -21,6 +21,8 @@ Tested and working on the following:
 * Platforms:
 	* Azure NV6_Promo
 
+**WARNING: Machines provided by Shadow.tech supposedly have incompatibility with GeForce Experience and may brick your VM. Use at your own risk.**
+
 ## FAQ
 ### Will this work on \<insert platform and instance name here\>?
   I have only tested this on Azure's NV6_Promo instance. I would like to build a list of platforms it currently supports, so if you've tested it yourself and it works, please message me on reddit `/u/acceleration3` with the information on your VM. If it doesn't work you can also message me with details and I will try and change the script to support your VM.
