@@ -21,7 +21,7 @@ Tested and working on the following:
 
 * Platforms:
 	* Azure NV6_Promo (Tesla M60)
-	* Amazon AWS g4dn.large (Tesla T4)
+	* Amazon AWS EC2 g4dn.large (Tesla T4)
 
 
 **WARNING: Machines provided by Shadow.tech supposedly have incompatibility with GeForce Experience and may brick your VM. Use at your own risk.**
