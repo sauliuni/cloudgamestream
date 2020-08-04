@@ -17,6 +17,7 @@ Tested and working on the following:
 * OS:
 	* Windows 10 Pro build 2004
 	* Windows Server 2019
+	* Windows Server 2016
 
 * Platforms:
 	* Azure NV6_Promo (Tesla M60)
