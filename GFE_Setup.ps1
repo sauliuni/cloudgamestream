@@ -18,6 +18,7 @@ Write-Output ""
 if($RebootSkip -eq $false)
 {
     Write-Output "WARNING: Using Microsoft Remote Desktop will create a virtual monitor separate from the one running the NVIDIA GPU and prevent GeForce Experience from enabling the GameStream feature! You need to use another type of Remote Desktop solution such as AnyDesk or TeamViewer!"
+    Write-Output ""
     $install1 = (Read-Host "You need to have an audio interface installed for GameStream to work. Install VBCABLE? (y/n)").ToLower();
     $install2 = (Read-Host "You also need the NVIDIA GRID Drivers installed. Install the tested and recommended ones? (y/n)").ToLower();
 
