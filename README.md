@@ -29,7 +29,7 @@ Tested and working on the following:
   Remember to **not use this script on a Microsoft Remote Desktop session**. I recommend using AnyDesk as an alternative. If it still doesn't work then the script doesn't currently support your machine. 
 
 ### I can't connect to my VM using Moonlight.
-  You need to forward the ports on your machine. The ports you need to forward are 47984, 47989, 48010 TCP and 47998, 47999, 48000, 48010 UDP. If you're having more problems try downloading the [Moonlight Internet Streaming Tool)[https://github.com/moonlight-stream/Internet-Hosting-Tool/releases] and troubleshooting it.
+  You need to forward the ports on your machine. The ports you need to forward are 47984, 47989, 48010 TCP and 47998, 47999, 48000, 48010 UDP. If you're having more problems try downloading the [Moonlight Internet Streaming Tool](https://github.com/moonlight-stream/Internet-Hosting-Tool/releases) and troubleshooting it.
 
 ### GeForce Experience requires me to login. Do I have to create/use an NVIDIA account?
   Yes.
