@@ -68,13 +68,13 @@ if($RebootSkip -eq $false)
 	if($install2 -eq "y")
 	{
 		Write-Output "Installing NVIDIA GRID GPU drivers. The computer will restart and the script will re-run on startup."
-		$directory = [string](Get-Location);
+        $directory = [string](Get-Location);
         $script = "-Command `"& " + [string](Get-Location) + "\GFE_Setup.ps1`" -RebootSkip";
         $action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument $script -WorkingDirectory $directory
         $trigger = New-ScheduledTaskTrigger -AtLogon -RandomDelay "00:00:30"
         Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "GFESetup" -Description "GFESetup" | Out-Null
 
-		Start-Process -FilePath .\Bin\Drivers.exe -ArgumentList "-s","-clean" -NoNewWindow -Wait
+        Start-Process -FilePath .\Bin\Drivers.exe -ArgumentList "-s","-clean" -NoNewWindow -Wait
         Restart-Computer -Force
 	}
 }
@@ -108,6 +108,14 @@ Get-PnpDevice -Class "Display" -Status OK | where { $_.Name -notmatch "nvidia" }
 Write-Output "Adding a GameStream rule to the Windows Firewall..."
 New-NetFirewallRule -DisplayName "NVIDIA GameStream TCP" -Direction inbound -LocalPort 47984,47989,48010 -Protocol TCP -Action Allow
 New-NetFirewallRule -DisplayName "NVIDIA GameStream UDP" -Direction inbound -LocalPort 47998,47999,48000,48010 -Protocol UDP -Action Allow
+
+$osType = Get-CimInstance -ClassName Win32_OperatingSystem
+
+if($osType.ProductType -eq 3)
+{
+    Write-Output "Windows Server detected, installing Wireless Networking."
+    Install-WindowsFeature -Name Wireless-Networking
+}
 
 Write-Output "Done. You should now be able to use GameStream after you restart your computer."
 $restart = (Read-Host "Would you like to restart now? (y/n)").ToLower();
